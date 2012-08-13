@@ -1,0 +1,12 @@
+diff -Nru lo-menubar-0.1.1.orig/wscript lo-menubar-0.1.1/wscript
+--- lo-menubar-0.1.1.orig/wscript	2012-08-13 16:10:52.819289191 -0400
++++ lo-menubar-0.1.1/wscript	2012-08-13 16:30:17.051107704 -0400
+@@ -154,7 +154,7 @@
+ 	return target
+ 
+ def build(bld):
+-	includes = ['/usr/include/libreoffice']
++	includes = ['/usr/include/libreoffice', '/usr/lib64/libreoffice/sdk/include', '/usr/lib/libreoffice/sdk/include']
+ 	
+ 	includes.append (cppumaker (bld))
+ 	
