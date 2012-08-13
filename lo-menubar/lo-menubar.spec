@@ -58,11 +58,17 @@ export CXXFLAGS="%{optflags}"
 %dir %{_libdir}/libreoffice/share/
 %dir %{_libdir}/libreoffice/share/extensions/
 %dir %{_libdir}/libreoffice/share/extensions/menubar/
-%dir %{_libdir}/libreoffice/share/extensions/menubar/Linux_%{_host_cpu}/
 %dir %{_libdir}/libreoffice/share/extensions/menubar/META-INF/
 %{_libdir}/libreoffice/share/extensions/menubar/Jobs.xcu
-%{_libdir}/libreoffice/share/extensions/menubar/Linux_%{_host_cpu}/menubar.uno.so
 %{_libdir}/libreoffice/share/extensions/menubar/META-INF/manifest.xml
+%ifarch x86_64
+%dir %{_libdir}/libreoffice/share/extensions/menubar/Linux_x86_64/
+%{_libdir}/libreoffice/share/extensions/menubar/Linux_x86_64/menubar.uno.so
+%endif
+%ifarch %{ix86}
+%dir %{_libdir}/libreoffice/share/extensions/menubar/Linux_x86/
+%{_libdir}/libreoffice/share/extensions/menubar/Linux_x86/menubar.uno.so
+%endif
 
 
 %changelog
