@@ -23,8 +23,8 @@ Source1:	create-source-from-bzr-rev.sh
 # We need to download the latest xulrunner packages from Koji because OBS does
 # not use the updates repository. This causes globalmenu-extension to link with
 # an old version of xulrunner (which breaks the extension).
-Source2:	http://kojipkgs.fedoraproject.org//packages/xulrunner/%{_fedora_xul_ver}/%{_fedora_xul_rel}/%{_arch}/xulrunner-%{_fedora_xul_ver}-%{_fedora_xul_rel}.%{_arch}.rpm
-Source3:	http://kojipkgs.fedoraproject.org//packages/xulrunner/%{_fedora_xul_ver}/%{_fedora_xul_rel}/%{_arch}/xulrunner-devel-%{_fedora_xul_ver}-%{_fedora_xul_rel}.%{_arch}.rpm
+Source2:	http://kojipkgs.fedoraproject.org//packages/xulrunner/%{_fedora_xul_ver}/%{_fedora_xul_rel}/%{_host_cpu}/xulrunner-%{_fedora_xul_ver}-%{_fedora_xul_rel}.%{_host_cpu}.rpm
+Source3:	http://kojipkgs.fedoraproject.org//packages/xulrunner/%{_fedora_xul_ver}/%{_fedora_xul_rel}/%{_host_cpu}/xulrunner-devel-%{_fedora_xul_ver}-%{_fedora_xul_rel}.%{_host_cpu}.rpm
 
 BuildRequires:	autoconf213
 BuildRequires:	gcc-c++
