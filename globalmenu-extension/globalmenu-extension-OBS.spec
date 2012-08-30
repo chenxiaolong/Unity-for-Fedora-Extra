@@ -4,8 +4,8 @@
 # takes a longer time to build than the regular version of this package.
 
 %define _bzr_rev 348
-%define _fedora_xul_ver 14.0.1
-%define _fedora_xul_rel 5.fc17
+%define _fedora_xul_ver 15.0
+%define _fedora_xul_rel 2.fc17
 
 %global debug_package %{nil}
 
