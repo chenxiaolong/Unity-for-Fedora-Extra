@@ -1,0 +1,12 @@
+diff -Nru unity-greeter-12.10.2.orig/data/com.canonical.unity-greeter.gschema.xml unity-greeter-12.10.2/data/com.canonical.unity-greeter.gschema.xml
+--- unity-greeter-12.10.2.orig/data/com.canonical.unity-greeter.gschema.xml	2012-08-30 20:25:04.357996532 -0400
++++ unity-greeter-12.10.2/data/com.canonical.unity-greeter.gschema.xml	2012-08-30 20:26:18.511991137 -0400
+@@ -2,7 +2,7 @@
+ <schemalist gettext-domain="unity-greeter">
+   <schema id="com.canonical.unity-greeter" path="/com/canonical/unity-greeter/">
+     <key name="background" type="s">
+-      <default>'/usr/share/backgrounds/warty-final-ubuntu.png'</default>
++      <default>'/usr/share/backgrounds/beefy-miracle/default/wide/beefy-miracle.png'</default>
+       <summary>Background file to use, either an image path or a color (e.g. #772953)</summary>
+     </key>
+     <key name="background-color" type="s">

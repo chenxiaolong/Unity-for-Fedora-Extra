@@ -15,6 +15,7 @@ Source0:	https://launchpad.net/unity-greeter/12.10/%{version}/+download/unity-gr
 Source99:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-greeter_%{version}-%{_ubuntu_rel}.debian.tar.gz
 
 Patch0:		0001_Link_against_m.patch
+Patch1:		0002_Beefy_Miracle_Background.patch
 
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -44,6 +45,7 @@ implemented as a LightDM greeter.
 %setup -q
 
 %patch0 -p1 -b .link_against_m
+%patch1 -p1 -b .beefy_miracle
 
 # Apply Ubuntu's patches
 tar zxvf '%{SOURCE99}'
