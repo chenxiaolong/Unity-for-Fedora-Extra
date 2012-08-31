@@ -37,6 +37,7 @@ Requires:	indicator-sound
 Requires:	NetworkManager-gnome
 
 Requires:	beefy-miracle-backgrounds-single
+Requires:	fedora-logos
 
 %description
 This package contains the greeter (login screen) application for Unity. It is
@@ -65,6 +66,11 @@ make %{?_smp_mflags}
 
 %install
 make install DESTDIR=$RPM_BUILD_ROOT
+
+# Use Fedora logo
+rm $RPM_BUILD_ROOT%{_datadir}/unity-greeter/logo.png
+ln -s /usr/share/pixmaps/system-logo-white.png \
+  $RPM_BUILD_ROOT%{_datadir}/unity-greeter/logo.png
 
 # Install PolicyKit rule
 install -dm755 \
