@@ -1,0 +1,14 @@
+diff -Nru unity-greeter-12.10.2.orig/src/Makefile.am unity-greeter-12.10.2/src/Makefile.am
+--- unity-greeter-12.10.2.orig/src/Makefile.am	2012-08-30 19:49:40.662050537 -0400
++++ unity-greeter-12.10.2/src/Makefile.am	2012-08-30 19:54:10.409016798 -0400
+@@ -52,7 +52,9 @@
+ 	--target-glib 2.32
+ 
+ unity_greeter_LDADD = \
+-	$(UNITY_GREETER_LIBS)
++	$(UNITY_GREETER_LIBS) \
++	-lm \
++	-lX11
+ 
+ unity_greeter_vala.stamp: $(top_srcdir)/config.h
+ 
