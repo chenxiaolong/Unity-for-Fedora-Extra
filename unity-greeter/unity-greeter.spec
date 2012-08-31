@@ -36,6 +36,8 @@ Requires:	indicator-session
 Requires:	indicator-sound
 Requires:	NetworkManager-gnome
 
+Requires:	beefy-miracle-backgrounds-single
+
 %description
 This package contains the greeter (login screen) application for Unity. It is
 implemented as a LightDM greeter.
