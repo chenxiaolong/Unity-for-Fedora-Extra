@@ -3,14 +3,14 @@
 # This package is for the OBS only! It contains workarounds for the OBS and
 # takes a longer time to build than the regular version of this package.
 
-%define _bzr_rev 348
-%define _fedora_xul_ver 15.0
-%define _fedora_xul_rel 2.fc17
+%define _bzr_rev 352
+%define _fedora_xul_ver 15.0.1
+%define _fedora_xul_rel 3.fc17
 
 %global debug_package %{nil}
 
 Name:		globalmenu-extension
-Version:	3.2.6
+Version:	3.2.7
 Release:	1%{?dist}
 Summary:	Global menubar extension for Firefox and Thunderbird
 
@@ -195,6 +195,9 @@ popd
 
 
 %changelog
+* Sun Sep 23 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 3.2.7-1
+- Version 3.2.7
+
 * Sun Aug 12 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 3.2.6-1
 - Initial release
 - Version 3.2.6 (bzr rev 428 tags this release)

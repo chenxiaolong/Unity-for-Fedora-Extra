@@ -1,11 +1,11 @@
 # Written by: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
 
-%define _bzr_rev 348
+%define _bzr_rev 352
 
 %global debug_package %{nil}
 
 Name:		globalmenu-extension
-Version:	3.2.6
+Version:	3.2.7
 Release:	1%{?dist}
 Summary:	Global menubar extension for Firefox and Thunderbird
 
@@ -160,6 +160,9 @@ popd
 
 
 %changelog
+* Sun Sep 23 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 3.2.7-1
+- Version 3.2.7
+
 * Sun Aug 12 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 3.2.6-1
 - Initial release
 - Version 3.2.6 (bzr rev 428 tags this release)
