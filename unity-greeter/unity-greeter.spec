@@ -3,7 +3,7 @@
 %define _ubuntu_rel 0ubuntu2
 
 Name:		unity-greeter
-Version:	12.10.2
+Version:	12.10.3
 Release:	1.%{_ubuntu_rel}%{?dist}
 Summary:	LightDM Unity Greeter
 
@@ -15,7 +15,12 @@ Source0:	https://launchpad.net/unity-greeter/12.10/%{version}/+download/unity-gr
 Source99:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-greeter_%{version}-%{_ubuntu_rel}.debian.tar.gz
 
 Patch0:		0001_Link_against_m.patch
+%if 0%{fedora} == 17
 Patch1:		0002_Beefy_Miracle_Background.patch
+%endif
+%if 0%{fedora} == 18
+Patch1:		0002_Spherical_Cow_Background.patch
+%endif
 
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -31,13 +36,22 @@ BuildRequires:	pkgconfig(liblightdm-gobject-1)
 
 Requires:	gnome-settings-daemon
 Requires:	indicator-datetime
-#Requires:	indicator-power
+Requires:	indicator-power
 Requires:	indicator-session
 Requires:	indicator-sound
+%if 0%{fedora} <= 17
 Requires:	NetworkManager-gnome
+%else
+Requires:	network-manager-applet
+%endif
 
 Requires:	beefy-miracle-backgrounds-single
 Requires:	fedora-logos
+
+###
+BuildRequires:	lightdm >= 1.3.3-100
+Requires:	lightdm >= 1.3.3-100
+###
 
 %description
 This package contains the greeter (login screen) application for Unity. It is
@@ -48,7 +62,7 @@ implemented as a LightDM greeter.
 %setup -q
 
 %patch0 -p1 -b .link_against_m
-%patch1 -p1 -b .beefy_miracle
+%patch1 -p1 -b .background
 
 # Apply Ubuntu's patches
 tar zxvf '%{SOURCE99}'
@@ -104,6 +118,10 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 
 
 %changelog
+* Sat Sep 29 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 12.10.3-1.0ubuntu2
+- Version 12.10.3
+- Ubuntu release 0ubuntu2
+
 * Thu Aug 30 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 12.10.2-1.0ubuntu2
 - Initial release
 - Version 12.10.2
