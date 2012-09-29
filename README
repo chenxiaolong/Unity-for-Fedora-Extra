@@ -3,3 +3,4 @@
 
 LightDM remote session
 03: python3-pycurl               -> A Python 3 interface to libcurl
+04: thin-client-config-agent     -> Retrieve list of remote servers for a user
