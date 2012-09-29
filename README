@@ -7,3 +7,4 @@ LightDM remote session
 05: remote-login-service         -> Service to track the remote servers to use
 06: lightdm-remote-session-uccsconfigure -> Session to configure UCCS
 07: libpam-freerdp               -> PAM module to auth. against an RDP server
+08: lightdm-remote-session-freerdp -> Session to login in with FreeRDP
