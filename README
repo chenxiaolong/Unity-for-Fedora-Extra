@@ -2,10 +2,11 @@
 02: lo-menubar                   -> Global menubar extension for LibreOffice
 
 LightDM remote session
-03: lightdm-guest-session        -> Guest Session Support for LightDM
-04: python3-pycurl               -> A Python 3 interface to libcurl
-05: thin-client-config-agent     -> Retrieve list of remote servers for a user
-06: remote-login-service         -> Service to track the remote servers to use
-07: lightdm-remote-session-uccsconfigure -> Session to configure UCCS
-08: libpam-freerdp               -> PAM module to auth. against an RDP server
-09: lightdm-remote-session-freerdp -> Session to login in with FreeRDP
+03: lightdm                      -> Temporary package for LightDM
+04: lightdm-guest-session        -> Guest Session Support for LightDM
+05: python3-pycurl               -> A Python 3 interface to libcurl
+06: thin-client-config-agent     -> Retrieve list of remote servers for a user
+07: remote-login-service         -> Service to track the remote servers to use
+08: lightdm-remote-session-uccsconfigure -> Session to configure UCCS
+09: libpam-freerdp               -> PAM module to auth. against an RDP server
+10: lightdm-remote-session-freerdp -> Session to login in with FreeRDP
