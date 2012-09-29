@@ -28,7 +28,7 @@ Patch10: lightdm-1.3.1-fedora_config.patch
 # hack in support for --nodaemon option
 Patch11: lightdm-1.2.2-nodaemon_option.patch
 
-Patch20:	03_launch_dbus.patch
+#Patch20:	03_launch_dbus.patch
 Patch21:	06_add_remote_login_hint.patch
 Patch22:	07_fix_types_in_vapi.patch
 
@@ -129,7 +129,7 @@ Requires: %{name}-qt%{?_isa} = %{version}-%{release}
 %patch10 -p1 -b .fedora_config
 %patch11 -p1 -b .nodaemon_option
 
-%patch20 -p1 -b .launch_dbus
+#patch20 -p1 -b .launch_dbus
 %patch21 -p1 -b .remote_login
 %patch22 -p1 -b .vapi_types
 
