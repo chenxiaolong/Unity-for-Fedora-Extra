@@ -1,2 +1,5 @@
 01: globalmenu-extension         -> Global menubar extensions for FF and TB
 02: lo-menubar                   -> Global menubar extension for LibreOffice
+
+LightDM remote session
+03: python3-pycurl               -> A Python 3 interface to libcurl
