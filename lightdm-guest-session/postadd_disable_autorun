@@ -1,0 +1,14 @@
+#!/bin/sh
+
+DESKTOP_FILES=('abrt-applet.desktop'
+               'sealertauto.desktop'
+               'user-dirs-update-gtk.desktop')
+
+mkdir -p ~/.config/autostart/
+for i in ${DESKTOP_FILES[*]}; do
+  if [ -f /etc/xdg/autostart/${i} ]; then
+    desktop-file-install --dir ~/.config/autostart/ /etc/xdg/autostart/${i} \
+      --set-key="X-GNOME-Autostart-enabled" \
+      --set-value="false"
+  fi
+done

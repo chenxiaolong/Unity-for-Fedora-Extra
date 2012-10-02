@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Disable screensaver so that the session won't be locked out due to the guest
+# user having no password.
+if [ -x /usr/bin/gconftool-2 ]; then
+  gconftool-2 --set --type bool /desktop/gnome/lockdown/disable_lock_screen True
+fi

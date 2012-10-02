@@ -1,0 +1,15 @@
+#!/bin/sh
+
+mkdir -p ~/.kde/share/config/
+
+cat >~/.kde/share/config/nepomukserverrc <<EOF
+[Basic Settings]
+Start Nepomuk=false
+EOF
+
+cat >~/.kde/share/config/notificationhelper <<EOF
+[Event]
+hideHookNotifier=true
+hideInstallNotifier=true
+hideRestartNotifier=true
+EOF
