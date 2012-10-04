@@ -12,3 +12,4 @@ LightDM remote session
 10: lightdm-remote-session-freerdp -> Session to login in with FreeRDP
 
 ??: python3-polib                -> Python library for messing with po files
+??: webapps-applications         -> Unity WebApp integration scripts
