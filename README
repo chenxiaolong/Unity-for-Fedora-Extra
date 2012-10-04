@@ -10,3 +10,5 @@ LightDM remote session
 08: lightdm-remote-session-uccsconfigure -> Session to configure UCCS
 09: libpam-freerdp               -> PAM module to auth. against an RDP server
 10: lightdm-remote-session-freerdp -> Session to login in with FreeRDP
+
+??: python3-polib                -> Python library for messing with po files
