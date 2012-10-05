@@ -14,3 +14,4 @@ LightDM remote session
 ??: python3-polib                -> Python library for messing with po files
 ??: webapps-applications         -> Unity WebApp integration scripts
 ??: webapps-greasemonkey         -> Firefox extension for user scripts
+??: unity-firefox-extension      -> Firefox extension for Unity integration
