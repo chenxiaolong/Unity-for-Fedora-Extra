@@ -35,44 +35,47 @@
 
 Name:		unity-webapps
 Version:	1.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Metapackage for all the Unity WebApps
 
 Group:		User Interface/Desktops
 License:	GPLv3+
 URL:		http://packages.ubuntu.com/search?keywords=webapps&searchon=names&suite=quantal&section=all
-Source0:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-amazoncloudreader_%{_ver_amazoncloudreader}.tar.gz
-Source1:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-angrybirds_%{_ver_angrybirds}.tar.gz
-Source2:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-bbcnews_%{_ver_bbcnews}.tar.gz
-Source3:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-cuttherope_%{_ver_cuttherope}.tar.gz
-Source4:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-facebookapps_%{_ver_facebookapps}.tar.gz
-Source5:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-facebookmessenger_%{_ver_facebookmessenger}.tar.gz
-Source6:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-gmail_%{_ver_gmail}.tar.gz
-Source7:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-googlecalendar_%{_ver_googlecalendar}.tar.gz
-Source8:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-googledocs_%{_ver_googledocs}.tar.gz
-Source9:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-googleplus_%{_ver_googleplus}.tar.gz
-Source10:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-googleplusgames_%{_ver_googleplusgames}.tar.gz
-Source11:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-grooveshark_%{_ver_grooveshark}.tar.gz
-Source12:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-hulu-player_%{_ver_hulu_player}.tar.gz
-Source13:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-lastfm-radio_%{_ver_lastfm_radio}.tar.gz
-Source14:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-launchpad_%{_ver_launchpad}.tar.gz
-Source15:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-librefm_%{_ver_librefm}.tar.gz
-Source16:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-linkedin_%{_ver_linkedin}.tar.gz
-Source17:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-livemail_%{_ver_livemail}.tar.gz
-Source18:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-mail-ru_%{_ver_mail_ru}.tar.gz
-Source19:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-newsblur_%{_ver_newsblur}.tar.gz
-Source20:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-pandora-com_%{_ver_pandora_com}.tar.gz
-Source21:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-qq-mail_%{_ver_qq_mail}.tar.gz
-Source22:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-reddit_%{_ver_reddit}.tar.gz
-Source23:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-tumblr_%{_ver_tumblr}.tar.gz
-Source24:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-twitter_%{_ver_twitter}.tar.gz
-Source25:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-vkcom_%{_ver_vkcom}.tar.gz
-Source26:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-wordpress-com_%{_ver_wordpress_com}.tar.gz
-Source27:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-yahoomail_%{_ver_yahoomail}.tar.gz
-Source28:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-yahoonews_%{_ver_yahoonews}.tar.gz
-Source29:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-yandex-music_%{_ver_yandex_music}.tar.gz
-Source30:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-yandexnews_%{_ver_yandexnews}.tar.gz
-Source31:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps-youtube_%{_ver_youtube}.tar.gz
+
+%define _base_url https://launchpad.net/ubuntu/+archive/primary/+files/unity-webapps
+
+Source0:	%{_base_url}-amazoncloudreader_%{_ver_amazoncloudreader}.tar.gz
+Source1:	%{_base_url}-angrybirds_%{_ver_angrybirds}.tar.gz
+Source2:	%{_base_url}-bbcnews_%{_ver_bbcnews}.tar.gz
+Source3:	%{_base_url}-cuttherope_%{_ver_cuttherope}.tar.gz
+Source4:	%{_base_url}-facebookapps_%{_ver_facebookapps}.tar.gz
+Source5:	%{_base_url}-facebookmessenger_%{_ver_facebookmessenger}.tar.gz
+Source6:	%{_base_url}-gmail_%{_ver_gmail}.tar.gz
+Source7:	%{_base_url}-googlecalendar_%{_ver_googlecalendar}.tar.gz
+Source8:	%{_base_url}-googledocs_%{_ver_googledocs}.tar.gz
+Source9:	%{_base_url}-googleplus_%{_ver_googleplus}.tar.gz
+Source10:	%{_base_url}-googleplusgames_%{_ver_googleplusgames}.tar.gz
+Source11:	%{_base_url}-grooveshark_%{_ver_grooveshark}.tar.gz
+Source12:	%{_base_url}-hulu-player_%{_ver_hulu_player}.tar.gz
+Source13:	%{_base_url}-lastfm-radio_%{_ver_lastfm_radio}.tar.gz
+Source14:	%{_base_url}-launchpad_%{_ver_launchpad}.tar.gz
+Source15:	%{_base_url}-librefm_%{_ver_librefm}.tar.gz
+Source16:	%{_base_url}-linkedin_%{_ver_linkedin}.tar.gz
+Source17:	%{_base_url}-livemail_%{_ver_livemail}.tar.gz
+Source18:	%{_base_url}-mail-ru_%{_ver_mail_ru}.tar.gz
+Source19:	%{_base_url}-newsblur_%{_ver_newsblur}.tar.gz
+Source20:	%{_base_url}-pandora-com_%{_ver_pandora_com}.tar.gz
+Source21:	%{_base_url}-qq-mail_%{_ver_qq_mail}.tar.gz
+Source22:	%{_base_url}-reddit_%{_ver_reddit}.tar.gz
+Source23:	%{_base_url}-tumblr_%{_ver_tumblr}.tar.gz
+Source24:	%{_base_url}-twitter_%{_ver_twitter}.tar.gz
+Source25:	%{_base_url}-vkcom_%{_ver_vkcom}.tar.gz
+Source26:	%{_base_url}-wordpress-com_%{_ver_wordpress_com}.tar.gz
+Source27:	%{_base_url}-yahoomail_%{_ver_yahoomail}.tar.gz
+Source28:	%{_base_url}-yahoonews_%{_ver_yahoonews}.tar.gz
+Source29:	%{_base_url}-yandex-music_%{_ver_yandex_music}.tar.gz
+Source30:	%{_base_url}-yandexnews_%{_ver_yandexnews}.tar.gz
+Source31:	%{_base_url}-youtube_%{_ver_youtube}.tar.gz
 
 Requires:	unity-webapps-amazoncloudreader	= %{_ver_amazoncloudreader}
 Requires:	unity-webapps-angrybirds	= %{_ver_angrybirds}
@@ -188,8 +191,6 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor/ &>/dev/null || : \
 %files amazoncloudreader
 %webapp_add_doc		-n amazoncloudreader	-v %{_ver_amazoncloudreader}
 %webapp_add_data	-n amazoncloudreader
-%webapp_add_icons	-n unity-webapps-angry-birds.png
-%icon_cache_scriptlets	-n amazoncloudreader
 %files angrybirds
 %webapp_add_doc		-n angrybirds		-v %{_ver_angrybirds}
 %webapp_add_data	-n angrybirds
@@ -367,6 +368,9 @@ done
 
 
 %changelog
+* Sat Oct 06 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0-2
+- Accidentally put the Angry Birds icons in the Amazon Cloud Reader WebApp
+
 * Fri Oct 05 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0-1
 - Initial release
 - Look at the git history for more details on the updates
