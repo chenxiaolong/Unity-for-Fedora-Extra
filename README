@@ -16,3 +16,4 @@ LightDM remote session
 ??: webapps-greasemonkey         -> Firefox extension for user scripts
 ??: unity-firefox-extension      -> Firefox extension for Unity integration
 ??: webaccounts-browser-extension -> Web Accounts extension for FF and Chromium
+??: unity-webapps                -> See spec file for list of WebApps
