@@ -7,13 +7,15 @@
 
 Name:		webapps-greasemonkey
 Version:	2.3.4
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Firefox extension to support user scripts
 
 Group:		User Interface/Desktops
 License:	MIT and BSD
 URL:		https://launchpad.net/webapps-greasemonkey
 Source0:	https://launchpad.net/webapps-greasemonkey/trunk/%{version}/+download/webapps-greasemonkey-%{version}.tar.gz
+
+Patch0:		0001_Multilib.patch
 
 BuildRequires:	unzip
 
@@ -39,6 +41,9 @@ websites.
 %prep
 %setup -q
 
+%patch0 -p1 -b .multilib
+sed -i 's|@LIBDIR@|%{_libdir}|g' components/unity_webapps.js
+
 
 %build
 ./build.sh
@@ -61,6 +66,10 @@ rm $RPM_BUILD_ROOT%{_libdir}/firefox/extensions/${EMID}/LICENSE.*
 
 
 %changelog
+* Sun Oct 07 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.3.4-2
+- Add 0001_Multilib.patch
+  - Load libraries from appropriate multilib libdir
+
 * Thu Oct 04 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.3.4-1
 - Initial release
 - Version 2.3.4

@@ -1,0 +1,21 @@
+diff -Nru webapps-greasemonkey-2.3.4.orig/components/unity_webapps.js webapps-greasemonkey-2.3.4/components/unity_webapps.js
+--- webapps-greasemonkey-2.3.4.orig/components/unity_webapps.js	2012-10-07 19:37:40.875662663 -0400
++++ webapps-greasemonkey-2.3.4/components/unity_webapps.js	2012-10-07 19:38:40.633651980 -0400
+@@ -20,7 +20,7 @@
+     try {
+       this.lib = ctypes.open("/usr/local/lib/libunity-webapps.so.0");
+     } catch (e) {
+-      this.lib = ctypes.open("/usr/lib/libunity-webapps.so.0");
++      this.lib = ctypes.open("@LIBDIR@/libunity-webapps.so.0");
+     }
+   }
+   this.permissions_get_domain_dontask =
+@@ -50,7 +50,7 @@
+     try {
+       this.lib = ctypes.open("/usr/local/lib/libunity-webapps-repository.so.0");
+     } catch (e) {
+-      this.lib = ctypes.open("libunity-webapps-repository.so.0");
++      this.lib = ctypes.open("@LIBDIR@/libunity-webapps-repository.so.0");
+     }
+   }
+ 
