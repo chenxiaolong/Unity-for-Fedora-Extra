@@ -1,0 +1,24 @@
+diff -Nru unity-firefox-extension-2.3.4.orig/unity-firefox-extension/content/unity-xid-helper.js unity-firefox-extension-2.3.4/unity-firefox-extension/content/unity-xid-helper.js
+--- unity-firefox-extension-2.3.4.orig/unity-firefox-extension/content/unity-xid-helper.js	2012-10-07 19:48:49.062475484 -0400
++++ unity-firefox-extension-2.3.4/unity-firefox-extension/content/unity-xid-helper.js	2012-10-07 19:51:02.601433496 -0400
+@@ -19,7 +19,7 @@
+ 	try {
+ 	    this.xidgetter = ctypes.open("/usr/local/lib/libufe-xidgetter.so.0");
+ 	} catch (e) {
+-	    this.xidgetter = ctypes.open("/usr/lib/libufe-xidgetter.so.0");
++	    this.xidgetter = ctypes.open("@LIBDIR@/libufe-xidgetter.so.0");
+ 	}
+     }
+ 
+diff -Nru unity-firefox-extension-2.3.4.orig/unity-firefox-extension/tools/gir-ctypes.xslt unity-firefox-extension-2.3.4/unity-firefox-extension/tools/gir-ctypes.xslt
+--- unity-firefox-extension-2.3.4.orig/unity-firefox-extension/tools/gir-ctypes.xslt	2012-10-07 19:48:49.063475484 -0400
++++ unity-firefox-extension-2.3.4/unity-firefox-extension/tools/gir-ctypes.xslt	2012-10-07 19:51:51.029419270 -0400
+@@ -44,7 +44,7 @@
+     try {
+         this.lib = ctypes.open("/usr/local/lib/libunity-webapps.so.0");
+     } catch (e) {
+-        this.lib = ctypes.open("/usr/lib/libunity-webapps.so.0");
++        this.lib = ctypes.open("@LIBDIR@/libunity-webapps.so.0");
+     }
+     }</xsl:text>
+ 

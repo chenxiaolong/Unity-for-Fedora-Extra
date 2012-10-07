@@ -2,13 +2,15 @@
 
 Name:		unity-firefox-extension
 Version:	2.3.4
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Firefox extension for Unity integration
 
 Group:		User Interface/Desktops
 License:	GPLv3+
 URL:		https://launchpad.net/unity-firefox-extension
 Source0:	https://launchpad.net/unity-firefox-extension/trunk/%{version}/+download/unity-firefox-extension-%{version}.tar.gz
+
+Patch0:		0001_Multilib.patch
 
 BuildRequires:	/usr/bin/xsltproc
 BuildRequires:	autoconf
@@ -48,6 +50,12 @@ the Unity desktop.
 
 %prep
 %setup -q
+
+%patch0 -p1 -b .multilib
+
+sed -i 's|@LIBDIR@|%{_libdir}|g' \
+  unity-firefox-extension/content/unity-xid-helper.js \
+  unity-firefox-extension/tools/gir-ctypes.xslt
 
 pushd libufe-xidgetter/
 autoreconf -vfi
@@ -98,6 +106,10 @@ find $RPM_BUILD_ROOT -type f -name '*.la' -delete
 
 
 %changelog
+* Sun Oct 07 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.3.4-2
+- Add 0001_Multilib.patch
+  - Load libraries from appropriate multilib libdir
+
 * Thu Oct 04 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.3.4-1
 - Initial release
 - Version 2.3.4
