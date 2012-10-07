@@ -59,6 +59,10 @@ unzip webapps-$(cat build_date).beta.xpi -d \
 
 rm $RPM_BUILD_ROOT%{_libdir}/firefox/extensions/${EMID}/LICENSE.*
 
+# Remove .multilib file created by the patch macro which got installed by the
+# build script
+rm $RPM_BUILD_ROOT%{_libdir}/firefox/extensions/${EMID}/components/*.multilib
+
 
 %files -n firefox-websites-integration
 %doc LICENSE.bsd LICENSE.mit LICENSE.mpl
