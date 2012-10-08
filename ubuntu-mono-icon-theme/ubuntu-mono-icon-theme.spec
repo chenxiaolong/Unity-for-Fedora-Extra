@@ -1,7 +1,7 @@
 # Written by: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
 
 Name:		ubuntu-mono-icon-theme
-Version:	0.0.45
+Version:	0.0.49
 Release:	1%{?dist}
 Summary:	Icons for the panel, designed in a simplified monochrome style
 
@@ -54,6 +54,9 @@ done
 
 
 %changelog
+* Mon Oct 08 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 0.0.49-1
+- Version 0.0.49
+
 * Sun Sep 23 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 0.0.45-1
 - Version 0.0.45
 

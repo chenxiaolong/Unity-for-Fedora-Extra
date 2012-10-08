@@ -1,0 +1,17 @@
+policy_module(guest-account,1.0)
+
+require {
+	type unconfined_t;
+	type xdm_t;
+}
+
+type guest_account_t;
+type guest_account_exec_t;
+domain_type(guest_account_t)
+domain_entry_file(guest_account_t, guest_account_exec_t)
+
+# Transition to the unconfined_t domain when guest-account is run from the
+# xdm_t domain. This is needed as xdm_t does not have permission to create
+# and remove users.
+#type_transition xdm_t guest_account_exec_t:process unconfined_t;
+domain_auto_trans(xdm_t, guest_account_exec_t, unconfined_t);
