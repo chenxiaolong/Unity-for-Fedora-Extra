@@ -2,7 +2,7 @@
 
 Name:		unity-firefox-extension
 Version:	2.3.4
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Firefox extension for Unity integration
 
 Group:		User Interface/Desktops
@@ -84,6 +84,11 @@ install -dm755 $RPM_BUILD_ROOT%{_libdir}/firefox/extensions/${EMID}/
 unzip unity.xpi -d $RPM_BUILD_ROOT%{_libdir}/firefox/extensions/${EMID}/
 popd
 
+# Use Fedora logo
+rm $RPM_BUILD_ROOT%{_libdir}/firefox/extensions/${EMID}/skin/cof.png
+ln -s %{_datadir}/pixmaps/fedora-logo-sprite.png \
+  $RPM_BUILD_ROOT%{_libdir}/firefox/extensions/${EMID}/skin/cof.png
+
 # Remove libtool files
 find $RPM_BUILD_ROOT -type f -name '*.la' -delete
 
@@ -106,6 +111,9 @@ find $RPM_BUILD_ROOT -type f -name '*.la' -delete
 
 
 %changelog
+* Sun Oct 07 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.3.4-3
+- Use Fedora logo
+
 * Sun Oct 07 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.3.4-2
 - Add 0001_Multilib.patch
   - Load libraries from appropriate multilib libdir
