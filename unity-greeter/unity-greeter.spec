@@ -1,9 +1,9 @@
 # Written by: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
 
-%define _ubuntu_rel 0ubuntu2
+%define _ubuntu_rel 0ubuntu3
 
 Name:		unity-greeter
-Version:	12.10.3
+Version:	12.10.4
 Release:	1.%{_ubuntu_rel}%{?dist}
 Summary:	LightDM Unity Greeter
 
@@ -118,6 +118,10 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 
 
 %changelog
+* Sun Oct 07 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 12.10.4-1.0ubuntu3
+- Version 12.10.4
+- Ubuntu release 0ubuntu3
+
 * Sat Sep 29 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 12.10.3-1.0ubuntu2
 - Version 12.10.3
 - Ubuntu release 0ubuntu2
