@@ -4,7 +4,7 @@
 
 Name:		thunderbird-messagingmenu
 Version:	1.0
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Messaging Menu Thunderbird Extension
 
 Group:		User Interface/Desktops
@@ -13,6 +13,10 @@ URL:		https://launchpad.net/messagingmenu-extension
 Source0:	messagingmenu-extension-bzr%{_bzr_rev}.tar.xz
 # Create source 0 by running this script (change _bzr_rev above as needed)
 Source1:	create-source-from-bzr-rev.sh
+
+# Fedora's Thunderbird package contains "mozilla-thunderbird.desktop" instead of
+# "thunderbird.desktop". The messagingmenu extension needs to know this.
+Patch0:		0001_Desktop_file_name.patch
 
 BuildRequires:	unzip
 
@@ -31,6 +35,8 @@ with the messaging menu.
 
 %prep
 %setup -q -n messagingmenu-extension-bzr%{_bzr_rev}
+
+%patch0 -p1 -b .desktop_file_name
 
 
 %build
@@ -60,6 +66,11 @@ echo "/usr/share/applications/mozilla-thunderbird.desktop" > \
 
 
 %changelog
+* Tue Oct 09 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0-3
+- Add 0001_Desktop_file_name.patch
+  - This extension needs to know that the desktop file is "mozilla-thunderbird
+    .desktop"
+
 * Wed Oct 03 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0-2
 - Add %{_datadir}/indicators/messages/applications/thunderbird
   - Otherwise, indicator-messages won't detect Thunderbird

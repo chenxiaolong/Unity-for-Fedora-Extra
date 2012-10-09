@@ -1,0 +1,30 @@
+diff -Nru messagingmenu-extension-bzr145.orig/res/modules/MessagingMenuModule.jsm messagingmenu-extension-bzr145/res/modules/MessagingMenuModule.jsm
+--- messagingmenu-extension-bzr145.orig/res/modules/MessagingMenuModule.jsm	2012-10-09 11:38:33.797713133 -0400
++++ messagingmenu-extension-bzr145/res/modules/MessagingMenuModule.jsm	2012-10-09 11:39:36.637647572 -0400
+@@ -89,13 +89,15 @@
+ 
+ XPCOMUtils.defineLazyGetter(this, "gBackend", function() {
+   try {
+-    var backend = new MessagingMenuBackend(Services.appinfo.name.toLowerCase()
++    var backend = new MessagingMenuBackend("mozilla-"
++                                           + Services.appinfo.name.toLowerCase()
+                                            + '.desktop',
+                                            onSourceActivated);
+     LOG("Loaded libmessaging-menu backend");
+   } catch(e) {
+     try {
+-      var backend = new IndicateBackend(Services.appinfo.name.toLowerCase()
++      var backend = new IndicateBackend("mozilla-"
++                                        + Services.appinfo.name.toLowerCase()
+                                         + '.desktop',
+                                         onSourceActivated, onOpen3Pane,
+                                         onOpenCompose, onOpenContacts);
+@@ -616,7 +618,7 @@
+     var appName = Cc["@mozilla.org/xre/app-info;1"].
+                     getService(Ci.nsIXULAppInfo).name.toLowerCase();
+     this._entry =
+-      unity.unity_launcher_entry_get_for_desktop_id(appName + ".desktop");
++      unity.unity_launcher_entry_get_for_desktop_id("mozilla-" + appName + ".desktop");
+     if (!this._entry)
+       throw "Failed to create UnityLauncherEntry";
+ 
