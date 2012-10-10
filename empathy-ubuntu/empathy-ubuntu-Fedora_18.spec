@@ -4,7 +4,7 @@
 
 Name:		empathy
 Version:	3.6.0
-Release:	100.%{_ubuntu_rel}%{?dist}
+Release:	101.%{_ubuntu_rel}%{?dist}
 Summary:	Instant Messaging Client for GNOME
 
 #Group:		
@@ -518,6 +518,9 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas/ &>/dev/null || :
 
 
 %changelog
+* Wed Oct 10 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 3.6.0-101.0ubuntu1
+- Rebuild for new telepathy-farstream
+
 * Wed Oct 03 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 3.6.0-100.0ubuntu1
 - Initial release
 - Version 3.6.0
