@@ -6,8 +6,8 @@
 %global debug_package %{nil}
 
 Name:		webapps-greasemonkey
-Version:	2.3.4
-Release:	2%{?dist}
+Version:	2.3.5
+Release:	1%{?dist}
 Summary:	Firefox extension to support user scripts
 
 Group:		User Interface/Desktops
@@ -70,6 +70,9 @@ rm $RPM_BUILD_ROOT%{_libdir}/firefox/extensions/${EMID}/components/*.multilib
 
 
 %changelog
+* Sat Oct 20 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.3.5-1
+- Version 2.3.5
+
 * Sun Oct 07 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.3.4-2
 - Add 0001_Multilib.patch
   - Load libraries from appropriate multilib libdir
