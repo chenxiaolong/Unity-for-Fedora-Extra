@@ -4,6 +4,7 @@ SPEC_VER="$(rpmspec -q --qf '%{version}\n' ubuntu-wallpapers.spec | head -1)"
 
 echo "Getting latest Ubuntu version..."
 UBUNTU_VER=($(wget -q 'http://packages.ubuntu.com/quantal/source/ubuntu-wallpapers' -O - | sed -n 's/.*>ubuntu-wallpapers_\(.*\)\.tar\.gz<.*/\1/p'))
+UBUNTU_VER=($(wget -q -O - 'https://launchpad.net/ubuntu/quantal/+source/ubuntu-wallpapers' | sed -n 's/^.*current\ release\ (\(.*\)).*$/\1/p'))
 
 echo ""
 
