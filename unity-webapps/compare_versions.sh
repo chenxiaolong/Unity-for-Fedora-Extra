@@ -20,7 +20,7 @@ LINE_THICK=$(printline '=')
 LINE_THIN=$(printline '-')
 
 for i in ${PACKAGES[@]}; do
-  UBUNTU_VER=$(grep -A2 "Package: unity-webapps-${i}" Sources | sed -n 's/^Version: \(.*\)/\1/p')
+  UBUNTU_VER=$(grep -A2 "Package: unity-webapps-${i}$" Sources | sed -n 's/^Version: \(.*\)/\1/p')
   SPEC_VER=$(sed -n "s/^%define[ \t]*_ver_${i/-/_}[ \t]*\(.*\)$/\1/p" unity-webapps.spec)
 
   echo "${LINE_THICK}"

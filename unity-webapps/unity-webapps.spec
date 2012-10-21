@@ -10,7 +10,6 @@
 %define _ver_googlecalendar	2.2
 %define _ver_googledocs		2.2
 %define _ver_googleplus		2.2
-%define _ver_googleplusgames	2.2
 %define _ver_grooveshark	2.2
 %define _ver_hulu_player	2.2
 %define _ver_lastfm_radio	2.2
@@ -35,7 +34,7 @@
 
 Name:		unity-webapps
 Version:	1.0
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Metapackage for all the Unity WebApps
 
 Group:		User Interface/Desktops
@@ -54,28 +53,27 @@ Source6:	%{_base_url}-gmail_%{_ver_gmail}.tar.gz
 Source7:	%{_base_url}-googlecalendar_%{_ver_googlecalendar}.tar.gz
 Source8:	%{_base_url}-googledocs_%{_ver_googledocs}.tar.gz
 Source9:	%{_base_url}-googleplus_%{_ver_googleplus}.tar.gz
-Source10:	%{_base_url}-googleplusgames_%{_ver_googleplusgames}.tar.gz
-Source11:	%{_base_url}-grooveshark_%{_ver_grooveshark}.tar.gz
-Source12:	%{_base_url}-hulu-player_%{_ver_hulu_player}.tar.gz
-Source13:	%{_base_url}-lastfm-radio_%{_ver_lastfm_radio}.tar.gz
-Source14:	%{_base_url}-launchpad_%{_ver_launchpad}.tar.gz
-Source15:	%{_base_url}-librefm_%{_ver_librefm}.tar.gz
-Source16:	%{_base_url}-linkedin_%{_ver_linkedin}.tar.gz
-Source17:	%{_base_url}-livemail_%{_ver_livemail}.tar.gz
-Source18:	%{_base_url}-mail-ru_%{_ver_mail_ru}.tar.gz
-Source19:	%{_base_url}-newsblur_%{_ver_newsblur}.tar.gz
-Source20:	%{_base_url}-pandora-com_%{_ver_pandora_com}.tar.gz
-Source21:	%{_base_url}-qq-mail_%{_ver_qq_mail}.tar.gz
-Source22:	%{_base_url}-reddit_%{_ver_reddit}.tar.gz
-Source23:	%{_base_url}-tumblr_%{_ver_tumblr}.tar.gz
-Source24:	%{_base_url}-twitter_%{_ver_twitter}.tar.gz
-Source25:	%{_base_url}-vkcom_%{_ver_vkcom}.tar.gz
-Source26:	%{_base_url}-wordpress-com_%{_ver_wordpress_com}.tar.gz
-Source27:	%{_base_url}-yahoomail_%{_ver_yahoomail}.tar.gz
-Source28:	%{_base_url}-yahoonews_%{_ver_yahoonews}.tar.gz
-Source29:	%{_base_url}-yandex-music_%{_ver_yandex_music}.tar.gz
-Source30:	%{_base_url}-yandexnews_%{_ver_yandexnews}.tar.gz
-Source31:	%{_base_url}-youtube_%{_ver_youtube}.tar.gz
+Source10:	%{_base_url}-grooveshark_%{_ver_grooveshark}.tar.gz
+Source11:	%{_base_url}-hulu-player_%{_ver_hulu_player}.tar.gz
+Source12:	%{_base_url}-lastfm-radio_%{_ver_lastfm_radio}.tar.gz
+Source13:	%{_base_url}-launchpad_%{_ver_launchpad}.tar.gz
+Source14:	%{_base_url}-librefm_%{_ver_librefm}.tar.gz
+Source15:	%{_base_url}-linkedin_%{_ver_linkedin}.tar.gz
+Source16:	%{_base_url}-livemail_%{_ver_livemail}.tar.gz
+Source17:	%{_base_url}-mail-ru_%{_ver_mail_ru}.tar.gz
+Source18:	%{_base_url}-newsblur_%{_ver_newsblur}.tar.gz
+Source19:	%{_base_url}-pandora-com_%{_ver_pandora_com}.tar.gz
+Source20:	%{_base_url}-qq-mail_%{_ver_qq_mail}.tar.gz
+Source21:	%{_base_url}-reddit_%{_ver_reddit}.tar.gz
+Source22:	%{_base_url}-tumblr_%{_ver_tumblr}.tar.gz
+Source23:	%{_base_url}-twitter_%{_ver_twitter}.tar.gz
+Source24:	%{_base_url}-vkcom_%{_ver_vkcom}.tar.gz
+Source25:	%{_base_url}-wordpress-com_%{_ver_wordpress_com}.tar.gz
+Source26:	%{_base_url}-yahoomail_%{_ver_yahoomail}.tar.gz
+Source27:	%{_base_url}-yahoonews_%{_ver_yahoonews}.tar.gz
+Source28:	%{_base_url}-yandex-music_%{_ver_yandex_music}.tar.gz
+Source29:	%{_base_url}-yandexnews_%{_ver_yandexnews}.tar.gz
+Source30:	%{_base_url}-youtube_%{_ver_youtube}.tar.gz
 
 Requires:	unity-webapps-amazoncloudreader	= %{_ver_amazoncloudreader}
 Requires:	unity-webapps-angrybirds	= %{_ver_angrybirds}
@@ -87,7 +85,6 @@ Requires:	unity-webapps-gmail		= %{_ver_gmail}
 Requires:	unity-webapps-googlecalendar	= %{_ver_googlecalendar}
 Requires:	unity-webapps-googledocs	= %{_ver_googledocs}
 Requires:	unity-webapps-googleplus	= %{_ver_googleplus}
-Requires:	unity-webapps-googleplusgames	= %{_ver_googleplusgames}
 Requires:	unity-webapps-grooveshark	= %{_ver_grooveshark}
 Requires:	unity-webapps-hulu-player	= %{_ver_hulu_player}
 Requires:	unity-webapps-lastfm-radio	= %{_ver_lastfm_radio}
@@ -139,7 +136,6 @@ This package contains the Unity WebApp for %{*}.
 %webapp_package -n googlecalendar	-v %{_ver_googlecalendar}	-u https://www.google.com/calendar/render	Google Calendar
 %webapp_package -n googledocs		-v %{_ver_googledocs}		-u https://docs.google.com/		Google Docs
 %webapp_package -n googleplus		-v %{_ver_googleplus}		-u https://plus.google.com/		Google Plus
-%webapp_package -n googleplusgames	-v %{_ver_googleplusgames}	-u https://plus.google.com/		Google Plus Games
 %webapp_package -n grooveshark		-v %{_ver_grooveshark}		-u http://grooveshark.com/		Grooveshark
 %webapp_package -n hulu-player		-v %{_ver_hulu_player}		-u http://www.hulu.com/profile/queue	Hulu Player
 %webapp_package -n lastfm-radio		-v %{_ver_lastfm_radio}		-u http://www.last.fm/			Last.fm Radio
@@ -232,9 +228,6 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor/ &>/dev/null || : \
 %webapp_add_data	-n googleplus
 %webapp_add_icons	-n unity-webapps-google-plus.png
 %icon_cache_scriptlets	-n googleplus
-%files googleplusgames
-%webapp_add_doc		-n googleplusgames	-v %{_ver_googleplusgames}
-%webapp_add_data	-n googleplusgames
 %files grooveshark
 %webapp_add_doc		-n grooveshark		-v %{_ver_grooveshark}
 %webapp_add_data	-n grooveshark
@@ -337,7 +330,7 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor/ &>/dev/null || : \
 
 
 %prep
-%setup -q -T -c -a0 -a1 -a2 -a3 -a4 -a5 -a6 -a7 -a8 -a9 -a10 -a11 -a12 -a13 -a14 -a15 -a16 -a17 -a18 -a19 -a20 -a21 -a22 -a23 -a24 -a25 -a26 -a27 -a28 -a29 -a30 -a31
+%setup -q -T -c -a0 -a1 -a2 -a3 -a4 -a5 -a6 -a7 -a8 -a9 -a10 -a11 -a12 -a13 -a14 -a15 -a16 -a17 -a18 -a19 -a20 -a21 -a22 -a23 -a24 -a25 -a26 -a27 -a28 -a29 -a30
 
 
 %install
@@ -364,10 +357,10 @@ for i in %{sources}; do
 done
 
 
-%files
-
-
 %changelog
+* Sat Oct 20 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0-3
+- Removed unity-webapps-googleplusgames (LP: 1065745)
+
 * Sat Oct 06 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0-2
 - Accidentally put the Angry Birds icons in the Amazon Cloud Reader WebApp
 
