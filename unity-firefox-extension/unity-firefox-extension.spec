@@ -1,8 +1,8 @@
 # Written by: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
 
 Name:		unity-firefox-extension
-Version:	2.3.4
-Release:	3%{?dist}
+Version:	2.3.5
+Release:	1%{?dist}
 Summary:	Firefox extension for Unity integration
 
 Group:		User Interface/Desktops
@@ -111,6 +111,9 @@ find $RPM_BUILD_ROOT -type f -name '*.la' -delete
 
 
 %changelog
+* Sat Oct 20 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.3.5-1
+- Version 2.3.5
+
 * Sun Oct 07 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.3.4-3
 - Use Fedora logo
 
