@@ -1,6 +1,6 @@
 # Written by: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
 
-%define _ubuntu_rel 0ubuntu4
+%define _ubuntu_rel 0ubuntu5
 
 Name:		ubuntu-fonts
 Version:	0.80
@@ -105,6 +105,10 @@ sed 's|/usr/share/consolefonts|%{_prefix}/lib/kbd/consolefonts|g' \
 
 
 %changelog
+* Sat Oct 20 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 0.80-1.0ubuntu5
+- Version 0.80
+- Ubuntu release 0ubuntu5
+
 * Mon Sep 24 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 0.80-1.0ubuntu4
 - Initial release
 - Version 0.80
