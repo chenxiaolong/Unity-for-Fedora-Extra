@@ -1,0 +1,12 @@
+diff -Nru libpam-freerdp-1.0.1.orig/configure.ac libpam-freerdp-1.0.1/configure.ac
+--- libpam-freerdp-1.0.1.orig/configure.ac	2012-11-29 16:30:30.702117000 -0500
++++ libpam-freerdp-1.0.1/configure.ac	2012-11-29 16:31:43.533700000 -0500
+@@ -44,7 +44,7 @@
+ if test "x$with_localinstall" = "xyes"; then
+ 	PAMMODULEDIR="${libdir}/security/"
+ else
+-	PAMMODULEDIR="/lib/security"
++	PAMMODULEDIR="${libdir}/security"
+ fi
+ AC_SUBST(PAMMODULEDIR)
+ 

@@ -2,7 +2,7 @@
 
 Name:		libpam-freerdp
 Version:	1.0.1
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	PAM module to authenticate against an RDP server with FreeRDP
 
 Group:		System Environment/Base
@@ -12,6 +12,7 @@ Source0:	https://launchpad.net/ubuntu/+archive/primary/+files/libpam-freerdp_%{v
 
 # Ubuntu's gtest is packaged differently
 Patch0:		0001_Disable_tests.patch
+Patch1:		0002_PAM_module_libdir.patch
 
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -31,6 +32,7 @@ authenticate a user against an RDP server.
 %setup -q
 
 %patch0 -p1 -b .disable-tests
+%patch1 -p1 -b .pam-libdir
 
 autoreconf -vfi
 
@@ -49,12 +51,15 @@ find $RPM_BUILD_ROOT -type f -name '*.la' -delete
 
 %files
 %doc AUTHORS ChangeLog README
-/lib/security/pam_freerdp.so
+%{_libdir}/security/pam_freerdp.so
 %dir %{_libexecdir}/libpam-freerdp/
 %{_libexecdir}/libpam-freerdp/freerdp-auth-check
 
 
 %changelog
+* Thu Nov 29 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0.1-2
+- Make sure the PAM module gets installed to the correct libdir
+
 * Sat Sep 29 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0.1-1
 - Initial release
 - Version 1.0.1
