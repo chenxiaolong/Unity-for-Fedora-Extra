@@ -1,0 +1,9 @@
+--- a/lightdm-remote-uccsconfigure
++++ b/lightdm-remote-uccsconfigure
+@@ -1,2 +1,5 @@
+ #%PAM-1.0
+-@include lightdm-autologin
++auth		include	lightdm-autologin
++account		include	lightdm-autologin
++password	include	lightdm-autologin
++session		include	lightdm-autologin
