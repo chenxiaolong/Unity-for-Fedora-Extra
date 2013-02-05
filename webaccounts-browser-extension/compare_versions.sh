@@ -1,15 +1,9 @@
 #!/usr/bin/env bash
 
-SPEC_VER="$(rpmspec -q --qf '%{version}\n' webaccounts-browser-extension.spec | head -1)"
+SPECFILE=webaccounts-browser-extension.spec
 
-echo "Getting latest Ubuntu version..."
-UBUNTU_VER=($(wget -q -O - 'https://launchpad.net/ubuntu/quantal/+source/webaccounts-browser-extension' | sed -n 's/^.*current\ release\ (\(.*\)-\(.*\)).*$/\1 \2/p'))
+source "$(dirname ${0})/../version_checker.sh"
 
-echo "Getting latest upstream version..."
-UPSTREAM_VER=$(wget -q 'https://launchpad.net/online-accounts-browser-extension/+download' -O - | sed -n 's/.*webaccounts-browser-extension-\(.*\)\.tar\.gz.*/\1/p' | head -n 1)
-
-echo ""
-
-echo -e "spec file version: ${SPEC_VER}"
-echo -e "Upstream version:  ${UPSTREAM_VER}"
-echo -e "Ubuntu version:    ${UBUNTU_VER[@]}"
+echo -e "spec file version: $(get_spec_version) $(get_spec_release --ubuntu)"
+echo -e "Upstream version:  $(get_launchpad_version webaccounts-browser-extension)"
+echo -e "Ubuntu version:    $(get_ubuntu_version webaccounts-browser-extension ${1:-raring})"

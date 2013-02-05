@@ -2,10 +2,10 @@
 
 # This package is called online-accounts-browser-extension upstream
 
-%define _ubuntu_rel 0ubuntu1
+%define _ubuntu_rel 0ubuntu4
 
 Name:		webaccounts-browser-extension
-Version:	0.4.4
+Version:	0.4.5
 Release:	1.%{_ubuntu_rel}%{?dist}
 Summary:	Web Accounts extension for FF and Chromium
 
@@ -136,6 +136,10 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas/ &>/dev/null || :
 
 
 %changelog
+* Tue Feb 05 2013 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 0.4.5-1.0ubuntu4
+- Version 0.4.5
+- Ubuntu release 0ubuntu4
+
 * Thu Oct 04 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 0.4.4-1.0ubuntu1
 - Initial release
 - Version 0.4.4
