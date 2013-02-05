@@ -1,16 +1,10 @@
 #!/usr/bin/env bash
 
-F18_SPEC_VER="$(rpmspec -q --qf '%{version}\n' empathy-ubuntu-Fedora_18.spec | head -1)"
-F18_PPA_REL="$(sed -n 's/^%define[ ]*_ppa_rel[ ]*\(.*\)$/\1/p' empathy-ubuntu-Fedora_18.spec)"
+SPECFILE=empathy-ubuntu-Fedora_18.spec
 
-echo "Getting latest Ubuntu version..."
-UBUNTU_VER=($(wget -q 'http://packages.ubuntu.com/quantal/source/empathy' -O - | sed -n 's/.*>empathy_\(.*\)-\(.*\)\.debian\.tar\.bz2<.*/\1 \2/p'))
+source "$(dirname ${0})/../version_checker.sh"
 
-echo "Getting latest upstream version..."
-UPSTREAM_VER=$(wget -q "http://ftp.gnome.org/pub/GNOME/sources/empathy/3.6/" -O - | sed -n 's/.*>LATEST-IS-\(.*\)<.*/\1/p')
-
-echo ""
-
-echo -e "F18 spec version: ${F18_SPEC_VER} ${F18_PPA_REL}"
-echo -e "Upstream version: ${UPSTREAM_VER}"
-echo -e "Ubuntu version:   ${UBUNTU_VER[@]}"
+echo -e "F18 spec version: $(get_spec_version) $(get_spec_release --ubuntu)"
+echo -e "Fedora version:   $(get_fedora_version empathy 18)"
+echo -e "Upstream version: $(get_gnome_version empathy 3.6)"
+echo -e "Ubuntu version:   $(get_ubuntu_version empathy ${1:-raring})"

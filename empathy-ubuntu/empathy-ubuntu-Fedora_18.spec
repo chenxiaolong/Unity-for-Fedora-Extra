@@ -1,13 +1,12 @@
 # Written by: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
 
-%define _ubuntu_rel 0ubuntu1
+%define _ubuntu_rel 0ubuntu2
 
 Name:		empathy
-Version:	3.6.0
-Release:	101.%{_ubuntu_rel}%{?dist}
+Version:	3.6.3
+Release:	100.%{_ubuntu_rel}%{?dist}
 Summary:	Instant Messaging Client for GNOME
 
-#Group:		
 License:	GPLv2+
 URL:		http://live.gnome.org/Empathy
 Source0:	http://download.gnome.org/sources/empathy/3.6/empathy-%{version}.tar.xz
@@ -518,6 +517,10 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas/ &>/dev/null || :
 
 
 %changelog
+* Tue Feb 05 2013 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 3.6.3-100.0ubuntu2
+- Version 3.6.3
+- Ubuntu release 0ubuntu2
+
 * Wed Oct 10 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 3.6.0-101.0ubuntu1
 - Rebuild for new telepathy-farstream
 
