@@ -1,6 +1,5 @@
-diff -Nru remote-login-service-1.0.0.orig/src/citrix-server.c remote-login-service-1.0.0/src/citrix-server.c
---- remote-login-service-1.0.0.orig/src/citrix-server.c	2012-09-27 15:30:13.279863387 -0400
-+++ remote-login-service-1.0.0/src/citrix-server.c	2012-09-27 15:35:40.891421895 -0400
+--- a/src/citrix-server.c
++++ b/src/citrix-server.c
 @@ -86,9 +86,12 @@
  {
  	CitrixServer * server = CITRIX_SERVER(object);
@@ -17,9 +16,8 @@ diff -Nru remote-login-service-1.0.0.orig/src/citrix-server.c remote-login-servi
  
  	G_OBJECT_CLASS (citrix_server_parent_class)->finalize (object);
  	return;
-diff -Nru remote-login-service-1.0.0.orig/src/rdp-server.c remote-login-service-1.0.0/src/rdp-server.c
---- remote-login-service-1.0.0.orig/src/rdp-server.c	2012-09-27 15:30:13.279863387 -0400
-+++ remote-login-service-1.0.0/src/rdp-server.c	2012-09-27 15:36:56.204347223 -0400
+--- a/src/rdp-server.c
++++ b/src/rdp-server.c
 @@ -86,9 +86,12 @@
  {
  	RdpServer * server = RDP_SERVER(object);
@@ -36,9 +34,8 @@ diff -Nru remote-login-service-1.0.0.orig/src/rdp-server.c remote-login-service-
  
  	G_OBJECT_CLASS (rdp_server_parent_class)->finalize (object);
  	return;
-diff -Nru remote-login-service-1.0.0.orig/src/uccs-server.c remote-login-service-1.0.0/src/uccs-server.c
---- remote-login-service-1.0.0.orig/src/uccs-server.c	2012-09-27 15:30:13.279863387 -0400
-+++ remote-login-service-1.0.0/src/uccs-server.c	2012-09-27 15:37:52.017378193 -0400
+--- a/src/uccs-server.c
++++ b/src/uccs-server.c
 @@ -396,7 +396,8 @@
  {
  	g_return_val_if_fail(IS_UCCS_SERVER(server), NULL);
