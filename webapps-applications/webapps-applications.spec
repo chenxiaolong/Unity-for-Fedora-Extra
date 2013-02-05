@@ -1,14 +1,18 @@
 # Written by: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
 
+%define _ubuntu_rel 0ubuntu3
+
 Name:		webapps-applications
-Version:	2.4.7
-Release:	1%{?dist}
+Version:	2.4.10
+Release:	1.%{_ubuntu_rel}%{?dist}
 Summary:	Unity WebApp integration scripts
 
 Group:		User Interface/Desktops
 License:	GPLv3
 URL:		https://launchpad.net/webapps-applications
-Source0:	https://launchpad.net/webapps-applications/trunk/%{version}/+download/webapps-%{version}.tar.gz
+Source0:	https://launchpad.net/ubuntu/+archive/primary/+files/webapps-applications_%{version}.orig.tar.gz
+
+Source99:	https://launchpad.net/ubuntu/+archive/primary/+files/webapps-applications_%{version}-%{_ubuntu_rel}.debian.tar.gz
 
 BuildArch:	noarch
 
@@ -40,6 +44,12 @@ desktop.
 
 %prep
 %setup -q -n webapps-%{version}
+
+# Apply Ubuntu's patches
+tar zxvf '%{SOURCE99}'
+for i in $(grep -v '#' debian/patches/series); do
+  patch -p1 -i "debian/patches/${i}"
+done
 
 
 %build
@@ -94,6 +104,10 @@ gtk-update-icon-cache -f %{_datadir}/icons/hicolor/ &>/dev/null || :
 
 
 %changelog
+* Tue Feb 05 2013 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.4.10-1.0ubuntu3
+- Version 2.4.10
+- Ubuntu release 0ubuntu3
+
 * Thu Oct 04 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.4.7-1
 - Initial release
 - Version 2.4.7
