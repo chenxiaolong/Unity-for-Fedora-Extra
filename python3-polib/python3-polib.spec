@@ -3,7 +3,7 @@
 # Partially based on Fedora 18's python-polib spec file
 
 Name:		python3-polib
-Version:	1.0.1
+Version:	1.0.2
 Release:	1%{?dist}
 Summary:	A library to parse and manage gettext catalogs
 
@@ -49,6 +49,9 @@ export LANG=en_US.UTF-8
 
 
 %changelog
+* Tue Feb 05 2013 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0.2-1
+- Version 1.0.2
+
 * Thu Oct 04 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0.1-1
 - Initial release
 - Version 1.0.1
