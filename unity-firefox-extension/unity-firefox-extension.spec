@@ -1,14 +1,14 @@
 # Written by: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
 
 Name:		unity-firefox-extension
-Version:	2.3.5
+Version:	2.4.4bzr13.01.29
 Release:	1%{?dist}
 Summary:	Firefox extension for Unity integration
 
 Group:		User Interface/Desktops
 License:	GPLv3+
 URL:		https://launchpad.net/unity-firefox-extension
-Source0:	https://launchpad.net/unity-firefox-extension/trunk/%{version}/+download/unity-firefox-extension-%{version}.tar.gz
+Source0:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-firefox-extension_%{version}.orig.tar.gz
 
 Patch0:		0001_Multilib.patch
 
@@ -111,6 +111,9 @@ find $RPM_BUILD_ROOT -type f -name '*.la' -delete
 
 
 %changelog
+* Tue Feb 05 2013 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.4.4bzr13.01.29-1
+- Version 2.4.4bzr13.01.29
+
 * Sat Oct 20 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 2.3.5-1
 - Version 2.3.5
 
