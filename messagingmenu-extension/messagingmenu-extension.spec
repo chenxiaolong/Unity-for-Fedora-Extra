@@ -1,10 +1,10 @@
 # Written by: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
 
-%define _bzr_rev 145
+%define _bzr_rev 147
 
 Name:		thunderbird-messagingmenu
-Version:	1.0
-Release:	3%{?dist}
+Version:	1.0.1
+Release:	1%{?dist}
 Summary:	Messaging Menu Thunderbird Extension
 
 Group:		User Interface/Desktops
@@ -66,6 +66,9 @@ echo "/usr/share/applications/mozilla-thunderbird.desktop" > \
 
 
 %changelog
+* Tue Feb 05 2013 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0.1-1
+- Version 1.0.1
+
 * Tue Oct 09 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0-3
 - Add 0001_Desktop_file_name.patch
   - This extension needs to know that the desktop file is "mozilla-thunderbird
