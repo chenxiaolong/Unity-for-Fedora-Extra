@@ -2,13 +2,15 @@
 
 Name:		lightdm-remote-session-freerdp
 Version:	1.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Session and configuration files to log in with FreeRDP
 
 Group:		User Interface/Desktops
 License:	GPLv3
 URL:		https://launchpad.net/lightdm-remote-session-freerdp
 Source0:	https://launchpad.net/lightdm-remote-session-freerdp/1.0/%{version}/+download/lightdm-remote-session-freerdp-%{version}.tar.gz
+
+Patch0:		0001_Fix_locale_file.patch
 
 Requires:	freerdp
 Requires:	libpam-freerdp
@@ -22,6 +24,8 @@ a full screen RDP session using LightDM and FreeRDP.
 
 %prep
 %setup -q
+
+%patch0 -p1
 
 
 %build
@@ -48,6 +52,9 @@ rm -rv $RPM_BUILD_ROOT%{_sysconfdir}/apparmor.d/
 
 
 %changelog
+* Tue Feb 05 2013 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0-2
+- Fix path to locale configuration file
+
 * Sat Sep 29 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0-1
 - Initial release
 - Version 1.0
