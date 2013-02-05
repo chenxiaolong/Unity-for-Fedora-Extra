@@ -1,18 +1,31 @@
-01: globalmenu-extension         -> Global menubar extensions for FF and TB
-02: lo-menubar                   -> Global menubar extension for LibreOffice
+Themes, icons, etc.
+
+01: ubuntu-themes                -> Ubuntu icons and Ambiance and Radiance
+02: ubuntu-wallpapers            -> Wallpapers used in Ubuntu from 9.10 - 13.04
+03: ubuntu-sounds                -> The sound theme used in Ubuntu <= 12.04
+
+Applications
+
+04: lightdm-guest-session        -> Guest Session Support for LightDM
+05: unity-greeter                -> The LightDM greeter for Unity
+06: globalmenu-extension         -> Global menubar extensions for FF and TB
+07: messagingmenu-extension      -> Messaging indicator extension for TB
+08: lo-menubar                   -> Global menubar extension for LibreOffice
+09: empathy-ubuntu               -> Empathy IM client with UOA support
+10: telepathy-indicator          -> Telepathy integration with the msg menu
+
+Unity Webapps
+11: python3-polib                -> Python library for messing with po files
+12: webapps-applications         -> Unity WebApp integration scripts
+13: webapps-greasemonkey         -> Firefox extension for user scripts
+14: unity-firefox-extension      -> Firefox extension for Unity integration
+15: webaccounts-browser-extension -> Web Accounts extension for FF and Chromium
+16: unity-webapps                -> See spec file for list of WebApps
 
 LightDM remote session
-03: lightdm-guest-session        -> Guest Session Support for LightDM
-04: python3-pycurl               -> A Python 3 interface to libcurl
-05: thin-client-config-agent     -> Retrieve list of remote servers for a user
-06: remote-login-service         -> Service to track the remote servers to use
-07: lightdm-remote-session-uccsconfigure -> Session to configure UCCS
-08: libpam-freerdp               -> PAM module to auth. against an RDP server
-09: lightdm-remote-session-freerdp -> Session to login in with FreeRDP
-
-??: python3-polib                -> Python library for messing with po files
-??: webapps-applications         -> Unity WebApp integration scripts
-??: webapps-greasemonkey         -> Firefox extension for user scripts
-??: unity-firefox-extension      -> Firefox extension for Unity integration
-??: webaccounts-browser-extension -> Web Accounts extension for FF and Chromium
-??: unity-webapps                -> See spec file for list of WebApps
+17: python3-pycurl               -> A Python 3 interface to libcurl
+18: thin-client-config-agent     -> Retrieve list of remote servers for a user
+19: remote-login-service         -> Service to track the remote servers to use
+20: lightdm-remote-session-uccsconfigure -> Session to configure UCCS
+21: libpam-freerdp               -> PAM module to auth. against an RDP server
+22: lightdm-remote-session-freerdp -> Session to login in with FreeRDP
