@@ -2,13 +2,15 @@
 
 Name:		lightdm-remote-session-uccsconfigure
 Version:	1.1
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Session and configuration files to login to configure UCCS
 
 Group:		User Interface/Desktops
 License:	GPLv3
 URL:		https://launchpad.net/lightdm-remote-session-uccsconfigure
 Source0:	https://launchpad.net/lightdm-remote-session-uccsconfigure/1.0/%{version}/+download/lightdm-remote-session-uccsconfigure-%{version}.tar.gz
+
+Patch0:		0001_PAM_include.patch
 
 Requires:	firefox
 Requires:	lightdm
@@ -21,6 +23,8 @@ session with a browser to setup a UCCS account.
 
 %prep
 %setup -q
+
+%patch0 -p1
 
 
 %build
@@ -48,6 +52,9 @@ rm -rv $RPM_BUILD_ROOT%{_sysconfdir}/apparmor.d/
 
 
 %changelog
+* Tue Feb 05 2013 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.1-2
+- Fix includes in PAM configuration file
+
 * Fri Sep 28 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.1-1
 - Initial release
 - Version 1.1
