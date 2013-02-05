@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-echo "Downloading Ubuntu 12.10 Source Package Database..."
+echo "Downloading Ubuntu 13.04 Source Package Database..."
 [ -f Sources.bz2 ] && rm Sources.bz2
 [ -f Sources ] && rm Sources
-curl -O http://archive.ubuntu.com/ubuntu/dists/quantal/universe/source/Sources.bz2
+curl -O http://archive.ubuntu.com/ubuntu/dists/raring/universe/source/Sources.bz2
 bunzip2 Sources.bz2
 PACKAGES=($(grep "Package: unity-webapps" Sources | sed 's/Package: unity-webapps-//g'))
 

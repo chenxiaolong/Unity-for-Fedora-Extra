@@ -1,10 +1,10 @@
 # Written by: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
 
-%define _ver_amazoncloudreader	2.2
+%define _ver_amazoncloudreader	2.2ubuntu1
 %define _ver_angrybirds		2.2
 %define _ver_bbcnews		2.2
 %define _ver_cuttherope		2.2
-%define _ver_facebookapps	2.2
+%define _ver_facebookapps	2.2ubuntu1
 %define _ver_facebookmessenger	2.2
 %define _ver_gmail		2.4.7
 %define _ver_googlecalendar	2.2
@@ -14,27 +14,27 @@
 %define _ver_hulu_player	2.2
 %define _ver_lastfm_radio	2.2
 %define _ver_launchpad		2.2
-%define _ver_librefm		2.2
+%define _ver_librefm		2.2ubuntu1
 %define _ver_linkedin		2.4.7
 %define _ver_livemail		2.2
 %define _ver_mail_ru		2.2
 %define _ver_newsblur		2.2
-%define _ver_pandora_com	2.2
+%define _ver_pandora_com	2.2ubuntu1
 %define _ver_qq_mail		2.2
 %define _ver_reddit		2.2
 %define _ver_tumblr		2.2
-%define _ver_twitter		2.4.7
+%define _ver_twitter		2.4.10.1
 %define _ver_vkcom		2.2
 %define _ver_wordpress_com	2.2
 %define _ver_yahoomail		2.2
 %define _ver_yahoonews		2.2
 %define _ver_yandex_music	2.2
 %define _ver_yandexnews		2.2
-%define _ver_youtube		2.4.7
+%define _ver_youtube		2.4.10.1
 
 Name:		unity-webapps
 Version:	1.0
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	Metapackage for all the Unity WebApps
 
 Group:		User Interface/Desktops
@@ -358,6 +358,14 @@ done
 
 
 %changelog
+* Tue Feb 05 2013 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0-4
+- Update amazoncloudreader to 2.2ubuntu1
+- Update facebookapps to 2.2ubuntu1
+- Update librefm to 2.2ubuntu1
+- Update pandora_com to 2.2ubuntu1
+- Update twitter to 2.4.10.1
+- Update youtube to 2.4.10.1
+
 * Sat Oct 20 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 1.0-3
 - Removed unity-webapps-googleplusgames (LP: 1065745)
 
