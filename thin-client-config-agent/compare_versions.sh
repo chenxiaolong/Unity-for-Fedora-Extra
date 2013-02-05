@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 
-SPEC_VER="$(rpmspec -q --qf '%{version}\n' thin-client-config-agent.spec | head -1)"
+SPECFILE=thin-client-config-agent.spec
 
-echo "Getting latest Ubuntu version..."
-UBUNTU_VER=($(wget -q -O - 'https://launchpad.net/ubuntu/quantal/+source/thin-client-config-agent' | sed -n 's/^.*current\ release\ (\(.*\)).*$/\1/p'))
+source "$(dirname ${0})/../version_checker.sh"
 
-echo ""
-
-echo -e "spec file version: ${SPEC_VER}"
+echo -e "spec file version: $(get_spec_version)"
 echo -e "Upstream version:  (none)"
-echo -e "Ubuntu version:    ${UBUNTU_VER[@]}"
+echo -e "Ubuntu version:    $(get_ubuntu_version thin-client-config-agent ${1:-raring} native)"
