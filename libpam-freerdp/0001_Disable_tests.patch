@@ -1,6 +1,5 @@
-diff -Nru libpam-freerdp-1.0.1.orig/configure.ac libpam-freerdp-1.0.1/configure.ac
---- libpam-freerdp-1.0.1.orig/configure.ac	2012-09-27 16:11:31.256439035 -0400
-+++ libpam-freerdp-1.0.1/configure.ac	2012-09-27 16:12:09.282899693 -0400
+--- a/configure.ac
++++ b/configure.ac
 @@ -49,16 +49,6 @@
  AC_SUBST(PAMMODULEDIR)
  
@@ -25,9 +24,8 @@ diff -Nru libpam-freerdp-1.0.1.orig/configure.ac libpam-freerdp-1.0.1/configure.
 -  tests/Makefile
  ])
  AC_OUTPUT
-diff -Nru libpam-freerdp-1.0.1.orig/Makefile.am libpam-freerdp-1.0.1/Makefile.am
---- libpam-freerdp-1.0.1.orig/Makefile.am	2012-09-27 16:11:31.253105720 -0400
-+++ libpam-freerdp-1.0.1/Makefile.am	2012-09-27 16:12:02.796268169 -0400
+--- a/Makefile.am
++++ b/Makefile.am
 @@ -1,7 +1,6 @@
  
  SUBDIRS = \
