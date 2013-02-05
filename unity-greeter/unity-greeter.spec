@@ -1,16 +1,16 @@
 # Written by: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
 
-%define _ubuntu_rel 0ubuntu3
+%define _ubuntu_rel 0ubuntu2
 
 Name:		unity-greeter
-Version:	12.10.4
+Version:	13.04.1
 Release:	1.%{_ubuntu_rel}%{?dist}
 Summary:	LightDM Unity Greeter
 
 Group:		User Interface/X
 License:	GPLv3
 URL:		https://launchpad.net/unity-greeter
-Source0:	https://launchpad.net/unity-greeter/12.10/%{version}/+download/unity-greeter-%{version}.tar.gz
+Source0:	https://launchpad.net/unity-greeter/13.04/%{version}/+download/unity-greeter-%{version}.tar.gz
 
 Source99:	https://launchpad.net/ubuntu/+archive/primary/+files/unity-greeter_%{version}-%{_ubuntu_rel}.debian.tar.gz
 
@@ -29,6 +29,7 @@ BuildRequires:	gnome-common
 BuildRequires:	pkgconfig
 BuildRequires:	vala-tools
 
+BuildRequires:	pkgconfig(gnome-settings-daemon)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(indicator3-0.4)
 BuildRequires:	pkgconfig(libcanberra)
@@ -49,8 +50,8 @@ Requires:	beefy-miracle-backgrounds-single
 Requires:	fedora-logos
 
 ###
-BuildRequires:	lightdm >= 1.3.3-100
-Requires:	lightdm >= 1.3.3-100
+BuildRequires:	lightdm >= 1.4.0-1
+Requires:	lightdm >= 1.4.0-1
 ###
 
 %description
@@ -118,6 +119,10 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 
 
 %changelog
+* Tue Feb 05 2013 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 13.04.1-1.0ubuntu2
+- Version 13.04.1
+- Ubuntu release 0ubuntu2
+
 * Sun Oct 07 2012 Xiao-Long Chen <chenxiaolong@cxl.epac.to> - 12.10.4-1.0ubuntu3
 - Version 12.10.4
 - Ubuntu release 0ubuntu3
